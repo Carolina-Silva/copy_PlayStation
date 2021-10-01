@@ -19,11 +19,48 @@ form button:hover{
     vertical-align: middle;
 }
 
+.bg-info{
+    background-color: #00439C !important;
+  }
+
+  .logo {
+    text-align: right;
+  }
+  /*Borda do card de promoções */
+  .border {
+    border: none !important;
+  }
+  /*Border img de card promoções */
+  #promo img {
+    border-radius: 20px !important;
+  }
+
+  /*Texto do card de promoções */
+  .texto {
+    font-family: 'Arial', sans-serif;
+  }
+
+/* vinicius ------------------------------------*/
+.cinza{
+    height: 400px;
+    width: 100%;
+    background-color: #BEBCBB;
+}
+
+.ajuste{
+    height: 400px;
+}
+
+.ajuste2{
+    height: 70px;
+}
+
+span{
+    color: blue;
+}
 
 
-
-
-
+/* vinicius ------------------------------------*/
 footer{
     background-color: #00439c;
     color: #fff;

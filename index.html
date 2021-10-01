@@ -77,7 +77,90 @@
                 </div>
             );
         }
-  
+
+
+
+        function Plus(){
+        return(
+        <section className="cinza">
+            <div className="container">
+                <div className="d-flex">
+                    <div className="justify-content-center">
+                        <img src="./img/plus.png" alt="logo" className="ajuste2 mb-4 mt-5 "/>
+                        <p>Melhore sua experiência PlayStation com o modo multijogador online, jogos mensais, descontos exclusivos e muito mais.</p>
+                        <button className="btn btn-light m-4"><span>Explore o Playstation Plus</span></button>
+                    </div>
+                    <div>
+                        <img  id="butaoXd" src="./img/banner-plus.png" alt="banner-plus" className="ajuste"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        );
+    }
+
+    /* Section do card de promoção*/
+    function Section(){
+            return (
+                <div>
+                  <Texto />
+                  <Promo />
+                </div>
+            )
+        }
+
+      /*Texto card de promoções */  
+      function Texto() {
+        return (
+          <div className="container text-center texto">
+            <h2 className="py-3">Novas promoções na <br />
+              PlayStation™Store</h2>
+            <span>Descontos incríveis, curadoria de coletâneas e 
+            promoções <br />
+             sazonais para PS5, PS4 e PS VR, tudo em um só lugar.</span>
+          </div>
+        )
+      }
+        
+      /*Cards promoções */
+      function Promoçao(props) {
+        return (
+          <div className="border card my-3" id="promo">
+            <a href="#"><img src={"_img/" + props.image} className="card-img-top" alt={props.title} title={props.title} /></a>
+            <div className="card-body border">
+              <h5 className="card-title border">{props.title}</h5>
+              <p className="card-text border">{props.text}</p>
+            </div>
+          </div>
+        )
+      }
+      /*Imagem cards de promoções */
+      function Promo() {
+        const Promo = [
+          {
+            id: 1,
+            image: '70.jpg',
+          },
+          {
+            id: 2,
+            image: 'alldeals.jpg',
+          },
+          {
+            id: 3,
+            image: 'free.jpg',
+          }
+        ]
+        return (
+          Promo.map(
+            Promos_row =>(
+              <div className="col-4 d-inline-block mx-5 w-25">
+                <Promoçao title={Promos_row.title} image={Promos_row.image} />
+              </div>
+            )
+          )
+        )
+      }
+
         function Social(){
         return(
         <section className="container">
@@ -87,28 +170,28 @@
                     <div className="m-4">
                         <li className="rede">
                             <a href="https://twitter.com/PlayStation_BR" alt="Twitter" target="_blanc">
-                            <img src="https://gmedia.paystation.com/is/image/SIEPDC/twitter-monochrome-icon-01-en-13may21?$1600px$" alt="twitter" tittle="Twitter" />
+                            <img src="./img/twitter.jpg" alt="twitter" tittle="Twitter" />
                             </a>
                         </li>
                     </div>
                     <div className="m-4">
                         <li className="rede">
                             <a href="https://www.facebook.com/PlayStationBR" alt="Facebook" target="_blanc">
-                            <img src="https://gmedia.laystation.com/is/image/SIEPDC/facebook-monochrome-icon-01-en-13may21?$1600px$" alt="facebook" tittle="Facebook" />
+                            <img src="./img/facebook.jpg" alt="facebook" tittle="Facebook" />
                             </a>
                         </li>
                     </div>
                     <div className="m-4">
                         <li className="rede">
                             <a href="https://www.instagram.com/playstation_br/" alt="Instagram" target="_blanc">
-                            <img src="https://gmeia.playstation.com/is/image/SIEPDC/instagram-monochrome-icon-01-en-13may21?$1600px$" alt="instagram" tittle="Instagram" />
+                            <img src="./img/instagram.jpg" alt="instagram" tittle="Instagram" />
                             </a>
                         </li>
                     </div>
                     <div className="m-4">
                         <li className="rede">
                             <a href="https://www.youtube.com/user/PlayStationBR" alt="Youtube" target="_blanc">
-                            <img src="https://gmedi.playstation.com/is/image/SIEPDC/youtube-monochrome-icon-01-en-13may21?$1600px$" alt="youtube" tittle="Youtube" />
+                            <img src="./img/youtube.jpg" alt="youtube" tittle="Youtube" />
                             </a>
                         </li>
                     </div>
@@ -118,9 +201,13 @@
         );
     }
 
+        
+
         function Main(props) {
             return (
                 <div>
+                    <Plus />
+                    <Section />
                     <Social />
                 </div>
             )
