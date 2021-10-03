@@ -13,11 +13,15 @@ form button{
 }
 form button:hover{
     background-color: #ccc !important;
+    border: none !important;
     
 }
 .bi-search{
     vertical-align: middle;
 }
+
+
+
 
 .bg-info{
     background-color: #00439C !important;
@@ -40,7 +44,7 @@ form button:hover{
     font-family: 'Arial', sans-serif;
   }
 
-/* vinicius ------------------------------------*/
+
 .cinza{
     height: 400px;
     width: 100%;
@@ -58,14 +62,41 @@ form button:hover{
 span{
     color: blue;
 }
+/* ----------------------- */
+#lista_social{ 
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    list-style: none;
+}
 
+.item_social{
+    text-decoration: none;
+    list-style: none;
+}
 
-/* vinicius ------------------------------------*/
+ul li img{
+    height: 100px;
+    cursor: pointer;
+}
+
+.rede:hover{
+    transform: translateY(-20px);
+}
+
+h2{
+    font-family: 'Poppins';
+}
+
 footer{
     background-color: #00439c;
     color: #fff;
     padding: 64px 10px;
     justify-content: space-between;
+}
+footer img{
+    height: 60px;
+    margin: 20px 0 30px;
 }
 .footer_right {
     margin-left: 90px;

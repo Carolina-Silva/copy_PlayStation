@@ -25,6 +25,35 @@
 
 <body>
     <div id="root"></div>
+     <!-- <div className="banner4">
+        <div className="container justify-content-center  text-center">
+        <div className="title1 text-primary ">Jogar não tem Limetes</div>
+        <div>
+            <h2 className="title2 ">Apresentamos o PlayStation 5 </h2>
+        </div>
+        <p className="description text-secondary ">Libere novas possibilidades de jogos que você nunca imaginou</p>
+        </div>
+
+        <div className="container">
+            <div className="row d-flex align-items-center">
+                <div className="col-6">
+                    <h3>Console PlayStation 5</h3>
+                    <p className="text-secondary">Descubra uma nova geração de jogos incríveis de PlayStation.</p>
+                    <div>
+                    <button type="button" class="btn btn-primary">Saiba Mais</button>
+                </div>
+                </div>
+                
+                <div className="col-6" >
+                    <img  className="im" src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-5-horizontal-product-shot-01-ps5-en-23nov20?$1200px--t$" alt=" Console"/>
+                    
+                </div>
+                
+            </div>
+        </div>  
+     
+     </div>
+    -->
     <script type="text/babel">
         function Header() {
             return (
@@ -80,6 +109,56 @@
 
 
 
+
+
+        function Card(props) {
+        return ( 
+                <div className="card">
+                    <img src={props.image} className="card-img-top" alt={props.title} title={props.title} />
+                     <div className="card-body">
+                        <h5 className="card-title">{props.title}</h5>
+                        <p className="card-text">{props.text}</p>
+                        <a href="#" className="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            
+         
+        )
+      }
+
+      function Produtos() {
+        const Produtos = [
+          {
+            id: 1,
+            image: 'https://gmedia.playstation.com/is/image/SIEPDC/ps4-slim-homepage-image-block-04-en-09oct20?$1600px$',
+            title: 'PlayStation 4',
+            description: 'Os jogos mais incriveis estão no PS4, com 1TB de armazenamento'
+          },
+          {
+            id: 2,
+            image: 'https://gmedia.playstation.com/is/image/SIEPDC/double11-202010-tw-psvr?$1600px$',
+            title: 'PlayStation VR',
+            description: 'Mais de 500 jogos e experiências, e subindo. Conheça todos eles.'
+          },
+          {
+            id: 3,
+            image: 'https://gmedia.playstation.com/is/image/SIEPDC/dualshock-4-listing-thumb-01-ps4-en-12oct20?$1600px$',
+            title: 'Acessórios',
+            description: 'Aprimore sua experiência PS4 com vários acessórios oficiais.'
+          }
+        ]
+        return (
+          Produtos.map(
+            Produto_row =>(
+              <div className="col-4">
+                <Card title={Produto_row.title} image={Produto_row.image} text={Produto_row.description} />
+              </div>
+            )
+          )
+        )
+      }
+
+
         function Plus(){
         return(
         <section className="cinza">
@@ -109,15 +188,16 @@
             )
         }
 
-      /*Texto card de promoções */  
+      /*textos */ 
+
       function Texto() {
         return (
           <div className="container text-center texto">
-            <h2 className="py-3">Novas promoções na <br />
+            <h2 className="display-6">Novas promoções na <br />
               PlayStation™Store</h2>
-            <span>Descontos incríveis, curadoria de coletâneas e 
+            <p>Descontos incríveis, curadoria de coletâneas e 
             promoções <br />
-             sazonais para PS5, PS4 e PS VR, tudo em um só lugar.</span>
+             sazonais para PS5, PS4 e PS VR, tudo em um só lugar.</p>
           </div>
         )
       }
@@ -126,7 +206,7 @@
       function Promoçao(props) {
         return (
           <div className="border card my-3" id="promo">
-            <a href="#"><img src={"_img/" + props.image} className="card-img-top" alt={props.title} title={props.title} /></a>
+            <a href="#"><img src={"./img/" + props.image} className="card-img-top" alt={props.title} title={props.title} /></a>
             <div className="card-body border">
               <h5 className="card-title border">{props.title}</h5>
               <p className="card-text border">{props.text}</p>
@@ -166,30 +246,30 @@
         <section className="container">
             <h2 className="text-center mb-3">Siga-nos nas redes sociais</h2>
             <div>
-                <ul className="d-flex">
+                <ul id="lista_social" className="d-flex">
                     <div className="m-4">
-                        <li className="rede">
+                        <li className="rede item_social">
                             <a href="https://twitter.com/PlayStation_BR" alt="Twitter" target="_blanc">
                             <img src="./img/twitter.jpg" alt="twitter" tittle="Twitter" />
                             </a>
                         </li>
                     </div>
                     <div className="m-4">
-                        <li className="rede">
+                        <li className="rede item_social">
                             <a href="https://www.facebook.com/PlayStationBR" alt="Facebook" target="_blanc">
                             <img src="./img/facebook.jpg" alt="facebook" tittle="Facebook" />
                             </a>
                         </li>
                     </div>
                     <div className="m-4">
-                        <li className="rede">
+                        <li className="rede item_social">
                             <a href="https://www.instagram.com/playstation_br/" alt="Instagram" target="_blanc">
                             <img src="./img/instagram.jpg" alt="instagram" tittle="Instagram" />
                             </a>
                         </li>
                     </div>
                     <div className="m-4">
-                        <li className="rede">
+                        <li className="rede item_social">
                             <a href="https://www.youtube.com/user/PlayStationBR" alt="Youtube" target="_blanc">
                             <img src="./img/youtube.jpg" alt="youtube" tittle="Youtube" />
                             </a>
@@ -206,6 +286,11 @@
         function Main(props) {
             return (
                 <div>
+                    <div className="container">
+                    <div className="row">
+                        <Produtos />
+                    </div>
+                     </div>
                     <Plus />
                     <Section />
                     <Social />
