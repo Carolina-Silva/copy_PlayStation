@@ -58,7 +58,7 @@
         function Header() {
             return (
                 <div>
-                    <div className="container-fluid bg-black text-white">
+                    <div className="container-fluid bg-black d-flex justify-content-end">
                         <img src="https://aliancageek.files.wordpress.com/2018/06/symbol-sony.jpg" className="logo"/>
                     </div>
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -89,10 +89,10 @@
                                             Suporte
                                         </a>
                                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li></li>
-                                            <li><a className="dropdown-item" href="#">Another action</a></li>
-                                            <li></li>
-                                            <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                            <li><img src="./img/suporte.svg" /></li>
+                                            <li><a className="dropdown-item" href="#">Suporte</a></li>
+                                            <li><img src="./img/status.svg"/></li>
+                                            <li><a className="dropdown-item" href="#">Status da PNS</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -107,9 +107,153 @@
             );
         }
 
+        function Estemes() {
+            return (
+                <div className="bg-Estemes">
+                    <div className="container">
+                        <div>
+                            <div>
+                                <div>
+                                    <h1 className="text-white pt-4">ESTE MÊS</h1>
+                                    <h1 className="text-white"><b>NO PLAYSTATION ®️</b></h1>
+                                </div>
+                                <p className="text-white lead">
+                                    Confira os maiores lançamentos deste mês,<br /> além de recursos dedicados, guias e muito<br /> mais.
+                                </p>
+                                <div className="d-grid gap-1 d-md-block">
+                                    <button className="btn btn-primary bg-white text-black mb-4 btn-radius" type="button">Saiba mais</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                        <div className="row">
+                            <div className="col-4">
+                                <div className="card ajuste-card">
+                                    <img src="https://gmedia.playstation.com/is/image/SIEPDC/great-ps4-games-enhanced-for-ps5-keyart-01-en-29sep21?$1600px$" className="card-img-top" alt="" />
+                                </div>
+                                <h5 className="text-white text-center"><b>Grandes jogos do PS4<br /> ganham vida no PS5</b></h5>
+                            </div>
+                            <div className="col-4">
+                                <div className="card ajuste-card">
+                                    <img src="https://gmedia.playstation.com/is/image/SIEPDC/tmop-fifa-22-editorial-image-block-01-en-23aug21?$1600px--t$" className="card-img-top" alt="" />
+                                </div>
+                                <h5 className="text-white text-center"><b>Como FIFA 22 tira<br/> proveito dos recursos <br/>inovadores do PS5</b></h5>
+                            </div>
+                            <div className="col-4 mb-4">
+                                <div className="card ajuste-card">
+                                    <img src="https://gmedia.playstation.com/is/image/SIEPDC/death-stranding-directors-cut-homepage-hero-desktop-01-ps5-29jun21$en?$1600px$" className="card-img-top" alt="" />
+                                </div>
+                                <h5 className="text-white text-center"><b>As novidades de DEATH<br/> STRANDING DIRECTOR'S<br/> CUT no PS5</b></h5>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        
+        function PlayStation5 () {
+            return(
+                <div className="banner4">
+                    <div className="container justify-content-center  text-center p-4">
+                    <div className="title1 text-primary ">Jogar não tem Limites</div>
+                    <div>
+                        <h2 className="title2 ">Apresentamos o PlayStation 5 </h2>
+                    </div>
+                    <p className="description text-secondary ">Libere novas possibilidades de jogos que você nunca imaginou</p>
+                    </div>
 
+                    <div className="container">
+                        <div className="row d-flex align-items-center">
+                            <div className="col-6">
+                                <h3>Console PlayStation 5</h3>
+                                <p className="text-secondary">Descubra uma nova geração de jogos incríveis de PlayStation.</p>
+                                <div>
+                                <button type="button" class="btn btn-primary">Saiba Mais</button>
+                            </div>
+                            </div>
+                            
+                            <div className="col-6" >
+                                <img  className="im" src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-5-horizontal-product-shot-01-ps5-en-23nov20?$1200px--t$" alt=" Console"/>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>  
+                 
+                 </div>
+            )    
+        }
 
+        function Horizon() {
+            return(
+                <div>
+                    <section className="bg-horizon">
+            <div className="container">
+                <div className="col-6">
+                        <img src="https://gmedia.playstation.com/is/image/SIEPDC/horizon-forbidden-west-white-logo-01-ps5-en-02sep21?$1200px--t$" alt="logo" className="ajuste2 mb-4 mt-5 "/>
+                        <h1 className="text-white">Disponível em 18 de fevereiro de 2022</h1>
+                        <p className="text-white">Junte-se à Aloy para desbravar o Oeste Proibido, uma área majestosa e perigosa que esconde novas ameaças misteriosas.</p>
+                        <button className="btn btn-light m-4"><span>Explore a Franquia Horizon</span></button>
+                     <div id="butaoXd">
+                    </div>
+                 </div>   
+            </div>
+        </section>
+                </div>
+            );
+        }
 
+        function Lancamentos() {
+            return (
+                <div className="bg-dark text-white">
+                    <div class="container p-3">
+                        <h3>Novos lançamentos</h3>
+                        <p>Grandes jogos de PS5 e PS4 já disponíveis</p>
+                        <div className="row row_lancamentos">
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/deathloop-store-art-01-ps4-ps5-en-20nov20?$1200px$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/tales-of-arise-store-art-01-ps4-10sep21$en?$1200px$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/lost-in-random-store-art-01-ps4-09sep21$en?$1200px$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/the-great-ace-attorney-chronicles-store-art-01-ps4-10jun21$en?$1200px$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/ratchet-and-clank-rift-apart-store-art-01-31mar21$en?$1200px$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/final-fantasy-vii-remake-intergrade-store-art-01-31mar21$en?$1200px$"/>
+                            </div>
+                        </div>
+                        <div className="row row_lancamentos">
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/returnal-square-art-01-ps5-en-16dec20?$1200px$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/kena-bridge-of-spirits-store-art-01-31mar21$en?$1200px$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/fist-forged-in-shadow-torch-store-art-01-ps4-25aug21$en?$1200px$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/resident-evil-village-store-art-01-ps5-en-09dec20$en?$1200px$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://image.api.playstation.com/vulcan/ap/rnd/202108/0407/ThCSPvgkTREJGB2MDwa1qD6W.png?w=1200$"/>
+                            </div>
+                            <div className="col-2">
+                                <img className="card_lancamento" src="https://gmedia.playstation.com/is/image/SIEPDC/ghost-of-tsushima-directors-cut-packshot-st-en-30jun21?$1200px$"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
 
         function Card(props) {
         return ( 
@@ -158,7 +302,6 @@
         )
       }
 
-
         function Plus(){
         return(
         <section className="cinza">
@@ -189,10 +332,9 @@
         }
 
       /*textos */ 
-
       function Texto() {
         return (
-          <div className="container text-center texto">
+          <div className="container text-center texto p-3">
             <h2 className="display-6">Novas promoções na <br />
               PlayStation™Store</h2>
             <p>Descontos incríveis, curadoria de coletâneas e 
@@ -281,12 +423,16 @@
         );
     }
 
-        
-
         function Main(props) {
             return (
                 <div>
-                    <div className="container">
+                    <Estemes />
+                    <PlayStation5 />
+                    <Horizon />
+                    <Lancamentos />
+                    <div className="container p-3">
+                            <h2 className="text-center">Explore o PlayStation®️4</h2>
+                            <p className="text-muted text-center">Jogos incríveis e diversão sem parar. Nunca houve época melhor para se divertir com o PS4.</p>
                     <div className="row">
                         <Produtos />
                     </div>

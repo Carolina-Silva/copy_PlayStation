@@ -1,6 +1,6 @@
+/* header-------------------------------------------- */
 .logo{
     width: 100px;
-    align-items: right;
     cursor: pointer;
 }
 #logo_playstation{
@@ -19,9 +19,55 @@ form button:hover{
 .bi-search{
     vertical-align: middle;
 }
+nav{
+    position: sticky !important;
+}
+/* header-------------------------------------------- */
 
+/* este mes-------------------------------------------- */
+        .bg-Estemes{
+            background-image: url('./img/bg-estemes.jpg');
+            background-size: cover;
+        }
 
+        .ajuste-card{
+            width: 250px;
+            margin-left: 45px;
+            margin-bottom: 10px;
+        }
 
+        .btn-radius{
+            border-radius: 20px !important;
+        }
+/* este mes-------------------------------------------- */
+  .im{
+      width: 600px !important;
+  }
+  button{
+    border-radius: 30px !important;
+
+  }
+
+  .bg-horizon{
+    background-image: url("https://image.api.playstation.com/vulcan/ap/rnd/202010/2915/SqRcyLjZbpK26ej6TnWf43xp.jpg");
+    width: 100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+}
+
+.row_lancamentos{
+    margin-bottom: 30px;
+}
+  .card_lancamento{
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+  }
+  .card_lancamento:hover{
+    box-shadow: 0 0 1em #BEBCBB;
+      cursor: pointer;
+  }
 
 .bg-info{
     background-color: #00439C !important;
